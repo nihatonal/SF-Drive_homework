@@ -6,42 +6,44 @@
     <title>About Us</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="module18.css">
 </head>
 <body>
-   <header>
-       <div class="logo__wrapper">
-           <p class="logo_name">SkillDrive</p>
-           <div class="line first"></div>
-           <div class="line second"></div>
-       </div>
-       <nav>
-           <ul class="nav_list">
-               <li class="nav_item"><a href="#" class="nav_link is-animated">О нас</a></li>
-               <li class="nav_item"><a href="#" class="nav_link is-animated">Условия</a></li>
-               <li class="nav_item"><a href="#" class="nav_link is-animated">Частые вопросы</a></li>
-           </ul>
-       </nav>
-       <div class="btn_wrapper">
-           <button class="btn_signin">Войти</button>
-       </div>
+   <header class="header content_wrapper">
+       <div class="header__wrapper content-container">
+            <div class="header__logo">
+                <p class="header__logo-name">SkillDrive</p>
+                <div class="header__logo-line first"></div>
+                <div class="header__logo-line second"></div>
+            </div>
+            <nav class="header__nav">
+                <a href="#" class="header__nav-item">О нас</a>
+                <a href="#" class="header__nav-item">Условия</a>
+                <a href="#" class="header__nav-item">Частые вопросы</a>
+            </nav>
+            
+            <div class="header__btn">
+                <button class="header__btn-signin">Войти</button>
+            </div>
 
-       <div class="menu_icon">
-           <div class="menu_icon_line first_line"></div>
-           <div class="menu_icon_line second_line"></div>
-           <div class="menu_icon_line third_line"></div>
-       </div>
+            <div class="header__menu-icon">
+                <div class="header__menu-icon-item"></div>
+                <div class="header__menu-icon-item"></div>
+                <div class="header__menu-icon-item"></div>
+            </div>
+        </div> 
    </header>
 
    <main>
        
-       <section class="about_us">
+       <section class="section-about content_wrapper">
             <div class="content_container">
-                <img class="main_image"  src="assets/images/mainphoto.svg" alt="people are staying">
-                <div class="about_us_content">
-                    <h1 class="about_us_content_title">О нас</h1>
-                    <p class="about_us_content_text">Это учебный проект, созданный с целью получения 
+                <img class="section-about__image"  src="assets/images/mainphoto.svg" alt="people are staying">
+                <div class="section-about__wrapper">
+                    <h1 class="section-about__wrapper-title">О нас</h1>
+                    <p class="section-about__wrapper-text">Это учебный проект, созданный с целью получения 
                         боевого опыта в разработке настоящего живого веб-приложения. Этот сервис 
                         имитирует работу каршеринга, в котором можно не только арендовать автомобили, 
                         но и сдавать их в аренду.</p>
@@ -49,78 +51,77 @@
             </div>
        </section>
 
-       <section class="contact">
-           <div class="contact_container">
-                <h2 class="section_title">Контакты</h2>
-                <div class="contact_wrapper">
-                        <div class="contact_content">
-                            <p class="contact_type text_s">Электронная почта</p>
-                            <p class="contact_address text_m">drive@skillfactory.com</p>
+       <section class="section-contact content_wrapper">
+           <div class="section-contact__container">
+                <h2 class="section-contact__title">Контакты</h2>
+                <div class="section-contact__wrapper">
+                        <div class="section-contact__wrapper-item">
+                            <p class="contact_type">Электронная почта</p>
+                            <p class="contact_address">drive@skillfactory.com</p>
                         </div>
-                        <span class="line_grey"></span>
-                        <div class="contact_content">
-                            <p class="contact_type text_s">Телефон</p>
-                            <p class="contact_address text_m">+7 912 123-45-67</p>
+                        <span class="section-contact__wrapper-line_grey"></span>
+                        <div class="section-contact__wrapper-item">
+                            <p class="contact_type">Телефон</p>
+                            <p class="contact_address">+7 912 123-45-67</p>
                         </div>
                 </div>
             </div>
        </section>
 
-       <section class="team">
-            <div class="team_container">
-                <h2 class="section_title">Команда</h2>
-                <div class="team_wrapper">
-                    <div class="team_person_wrapper">
-                        <img src="assets/images/ivan.png" alt="Иван Иванов">
-                        <p class="person_name text_m">Иван Иванов</p>
-                        <p class="person_profession text_s">СЕО</p>
+       <section class="section-team content_wrapper">
+                <div class="section-team__container">
+                    <h2 class="section-team__title">Команда</h2>
+                    <div class="section-team__wrapper">
+                            <div class="section-team__wrapper-item">
+                                <img src="assets/images/ivan.png" alt="Иван Иванов">
+                                <p class="person_name">Иван Иванов</p>
+                                <p class="person_profession">СЕО</p>
+                            </div>
+                            <div class="section-team__wrapper-item">
+                                <img src="assets/images/aleksey.png" alt="Алексей Смирнов">
+                                <p class="person_name">Алексей Смирнов</p>
+                                <p class="person_profession">Frontend-разработчик</p>
+                            </div>
+                            <div class="section-team__wrapper-item">
+                                <img src="assets/images/denis.png" alt="Денис Ярцев">
+                                <p class="person_name">Денис Ярцев</p>
+                                <p class="person_profession">Backend-разработчик</p>
+                            </div>
+                            <div class="section-team__wrapper-item">
+                                <img src="assets/images/nikalay.png" alt="Николай Морозов">
+                                <p class="person_name">Николай Морозов</p>
+                                <p class="person_profession">Дизайнер</p>
+                            </div>
+                            <div class="section-team__wrapper-item">
+                                <img src="assets/images/irina.png" alt="Ирина Деева">
+                                <p class="person_name">Ирина Деева</p>
+                                <p class="person_profession">Копирайтер</p>
+                            </div>
+                            <div class="section-team__wrapper-item">
+                                <img src="assets/images/maria.png" alt="Мария Стрелкова">
+                                <p class="person_name">Мария Стрелкова</p>
+                                <p class="person_profession">SMM</p>
+                            </div>
                     </div>
-                    <div class="team_person_wrapper">
-                        <img src="assets/images/aleksey.png" alt="Алексей Смирнов">
-                        <p class="person_name text_m">Алексей Смирнов</p>
-                        <p class="person_profession text_s">Frontend-разработчик</p>
-                        </div>
-                        <div class="team_person_wrapper">
-                            <img src="assets/images/denis.png" alt="Денис Ярцев">
-                            <p class="person_name text_m">Денис Ярцев</p>
-                            <p class="person_profession text_s">Backend-разработчик</p>
-                        </div>
-                        <div class="team_person_wrapper">
-                            <img src="assets/images/nikalay.png" alt="Николай Морозов">
-                            <p class="person_name text_m">Николай Морозов</p>
-                            <p class="person_profession text_s">Дизайнер</p>
-                        </div>
-                        <div class="team_person_wrapper">
-                            <img src="assets/images/irina.png" alt="Ирина Деева">
-                            <p class="person_name text_m">Ирина Деева</p>
-                            <p class="person_profession text_s">Копирайтер</p>
-                        </div>
-                        <div class="team_person_wrapper">
-                            <img src="assets/images/maria.png" alt="Мария Стрелкова">
-                            <p class="person_name text_m">Мария Стрелкова</p>
-                            <p class="person_profession text_s">SMM</p>
-                        </div>
                 </div>
-            </div>
        </section>
    </main>
 
-   <footer>
-       <div class="footer_wrapper">
-            <p class="copyright">© SkillDrive Inc. 2020</p>
-            <div class="social_icons_wrapper">
-                    <div class= "icon">
-                    <img src="assets/icons/vk.svg" alt="VK">
-                    </div>
-                    <div class= "icon">
-                        <img src="assets/icons/instagram.svg" alt="instagram">
-                    </div>
-                    <div class= "icon">
-                        <img src="assets/icons/facebook.svg" alt="facebook">
-                    </div>
-            </div>
+   <footer class="footer content_wrapper">
+        <div class="footer__wrapper">
+                <p class="footer__copyright">© SkillDrive Inc. 2020</p>
+                <div class="footer__social-icons">
+                        <div class= "icon">
+                        <img src="assets/icons/vk.svg" alt="VK">
+                        </div>
+                        <div class= "icon">
+                            <img src="assets/icons/instagram.svg" alt="instagram">
+                        </div>
+                        <div class= "icon">
+                            <img src="assets/icons/facebook.svg" alt="facebook">
+                        </div>
+                </div>
         </div>
-       
    </footer>
    
 </body>
