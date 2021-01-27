@@ -53,7 +53,7 @@ h2 {
     .header__logo-name {
       font-family: 'Rubik', sans-serif;
       font-style: normal;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 24px;
       line-height: 28px;
       color: inherit; }
@@ -63,10 +63,10 @@ h2 {
       background-color: #1B1B1B;
       position: absolute; }
     .header__logo .first {
-      left: 46px;
+      left: 42px;
       top: 9px; }
     .header__logo .second {
-      left: 46px;
+      left: 42px;
       top: 16px; }
   .header__nav {
     width: 293px;
@@ -153,21 +153,22 @@ h2 {
   .section-about__image {
     width: 397px;
     height: 300px;
-    padding-bottom: 61px; }
+    margin-bottom: 61px; }
     @media screen and (max-width: 767px) {
       .section-about__image {
         width: 267px;
         height: 202px;
-        padding-bottom: 0; } }
+        margin-bottom: 0; } }
   .section-about__wrapper {
     height: 212px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    font-family: "Roboto", sans-serif;
     color: #1B1B1B; }
     @media screen and (max-width: 767px) {
-      .section-about__wrapper {
+    .section-about__wrapper {
         height: 192px;
         margin-top: 40px; } }
     .section-about__wrapper-title {
@@ -182,13 +183,13 @@ h2 {
           margin-bottom: 10px; } }
     .section-about__wrapper-text {
       width: 925px;
+      font-style: normal;
+      font-weight: normal;
       font-size: 24px;
-      line-height: 147.3%;
-      text-align: center; }
+      line-height: 147.3%; }
       @media screen and (max-width: 767px) {
         .section-about__wrapper-text {
           width: 335px;
-          height: 144px;
           font-size: 16px; } }
 
 /*section contact*/
@@ -204,7 +205,7 @@ h2 {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: 40px; } }
+      padding-top: 0; } }
   .section-contact__container {
     height: 157px;
     display: flex;
@@ -226,7 +227,13 @@ h2 {
     .section-contact__wrapper-item {
       width: 264px;
       height: 56px;
-      cursor: pointer; }
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      @media screen and (max-width: 767px) {
+        .section-contact__wrapper-item {
+          height: 44px; } }
     .section-contact__wrapper .contact_type {
       font-style: normal;
       font-weight: normal;
@@ -283,14 +290,12 @@ h2 {
         margin-top: 40px;
         padding: 0; } }
   .section-team__wrapper {
-    width: 964px;
+    width: 980px;
     height: 582px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    padding-left: 8px;
-    padding-right: 8px; }
+    align-items: center; }
     @media screen and (max-width: 767px) {
       .section-team__wrapper {
         width: 334px;
@@ -322,13 +327,13 @@ h2 {
       .section-team__wrapper-item:hover {
         box-shadow: 2px 2px 2px 2px #4F4F4F; }
       .section-team__wrapper-item:nth-last-child(2) {
-        margin-left: 251px; }
+        margin-left: 261px; }
         @media screen and (max-width: 767px) {
           .section-team__wrapper-item:nth-last-child(2) {
             margin-left: 0;
             margin-bottom: 0; } }
       .section-team__wrapper-item:nth-last-child(1) {
-        margin-right: 251px; }
+        margin-right: 261px; }
         @media screen and (max-width: 767px) {
           .section-team__wrapper-item:nth-last-child(1) {
             margin-right: 0;
@@ -351,6 +356,9 @@ h2 {
         font-size: 14px;
         line-height: 147.3%;
         color: #828282; }
+        @media screen and (max-width: 767px) {
+          .section-team__wrapper-item .person_profession {
+            font-size: 12px; } }
 
 .footer {
   height: 124px;
@@ -375,6 +383,7 @@ h2 {
         align-items: flex-start;
         padding-left: 20px; } }
   .footer__copyright {
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -388,14 +397,14 @@ h2 {
         padding: 0;
         margin: 0; } }
   .footer__social-icons {
-    width: 120px;
-    height: 27px;
+    width: 124px;
+    height: 32px;
     display: flex;
     justify-content: space-between;
     margin-right: 40px; }
     @media screen and (max-width: 767px) {
       .footer__social-icons {
-        width: 128px;
+        width: 124px;
         height: 32px;
         display: flex;
         padding-right: 0; } }
