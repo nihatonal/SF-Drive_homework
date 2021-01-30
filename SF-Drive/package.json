@@ -1,0 +1,15 @@
+{
+  "name": "sf-drive",
+  "version": "1.0.0",
+  "description": "test sass",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass src/scss/style.scss src/css/style.css -w",
+    "sass_faq": "node-sass src/scss/faq.scss src/css/faq.css -w"
+  },
+  "author": "nihat onal",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

@@ -1,0 +1,564 @@
+/* variables*/
+
+$mainBlack: #1B1B1B;
+$black: #000;
+$grey: #4F4F4F;
+$lightGrey: #828282;
+$white: #fff;
+$bg_grey: #F7F9FB;
+$line_grey:#C8C8CF;
+$bg_footer: #3F3D56;
+
+/*mixin*/
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+  @else if $point == small {
+    @media screen and (max-width: 767px) {
+      @content;
+    }
+  }
+}
+
+/* generic*/
+.is-animated {
+transition: all 400ms ease;
+}
+
+/* normalize */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*common*/
+.content_wrapper {
+  width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+
+  @include breakpoint(small) {
+    width: 375px;
+  }
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 120%;
+  text-align: center;
+  color: $mainBlack;
+
+  @include breakpoint(small) {
+    font-size: 24px;
+  }
+  
+}
+/*header*/
+.header {
+  color: $mainBlack;
+  
+
+  &__wrapper{
+    height: 90px;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(small) {
+      height: 68px; 
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+  }
+    &__logo{
+      width: 115px;
+      height: 28px;
+      margin-left: 40px;
+      position: relative;
+
+      @include breakpoint(small) {
+        margin-left: 20px;
+      }
+
+        &-name {
+          font-family: 'Rubik', sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 28px;
+          color: inherit;
+        }
+
+        &-line {
+          width: 4px;
+          height: 3px;
+          background-color: $mainBlack;
+          position: absolute;
+        }
+        .first {
+          left: 42px;
+          top: 9px;
+        }
+        .second {
+          left: 42px;
+          top: 16px;
+        }   
+    }
+
+    &__nav {
+      width: 293px;
+      height: 19px;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: space-between;
+      margin-left: 806px;
+
+      @include breakpoint(small) {
+        display: none;
+      }
+
+        &-item {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 19px;
+          text-decoration: none;
+          color: inherit;
+          transition: color 400ms ease;
+          &:hover{
+            color: $black;
+            border-bottom: 2px solid rgb(243, 138, 0);
+          }
+        }
+    }
+
+    &__btn {
+      margin-left: 40px;
+
+      @include breakpoint(small) {
+        display: none;
+      }
+      &-signin{
+        padding: 12px 30px;
+        width: 106px;
+        height: 43px;
+        border: 1px solid rgba(27, 27, 27, 0.4);
+        background-color: transparent;
+        box-sizing: border-box;
+        border-radius: 6px;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        cursor: pointer;
+        outline: none;
+
+        &:hover {
+          background-color: rgb(243, 138, 0);
+          color: $white;
+          border-color: rgb(243, 138, 0);
+        }
+      }
+    }
+
+   
+    &__menu-icon {
+      width: 18px;
+      height: 12px;
+      position: relative;
+      display: none;
+      margin-right: 23px;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+
+      &:hover{
+       transform: rotate(360deg);
+      }
+
+      @include breakpoint(small) {
+        display: block;
+      }
+
+      &-item {
+        width: 18px;
+        height: 3px;
+        background-color: $black;
+        position: absolute;
+
+        &:nth-last-child(1){
+          top: 4px;
+        }
+        &:nth-last-child(2){
+          top: 8px;
+        }
+      }
+      
+    }
+
+    
+}
+
+/*section-about*/
+
+.section-about{
+  height: 733px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include breakpoint(small) {
+    height: 474px;
+    align-items: flex-start;
+  }
+
+  &__image {
+    width: 397px;
+    height: 300px;
+    margin-bottom: 61px;
+
+    @include breakpoint(small) {
+      width: 267px;
+      height: 202px;
+      margin-bottom: 0;
+    }
+  }
+  &__wrapper {
+    height: 212px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    color: $mainBlack;
+
+    @include breakpoint(small) {
+      height: 192px;
+      margin-top: 40px;
+      
+    }
+
+    &-title {
+      
+      font-weight: bold;
+      font-size: 64px;
+      line-height: 120%;
+      text-align: center;
+
+      @include breakpoint(small) {
+        height: 38px;
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+      
+    }
+
+    &-text {
+      width: 925px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 147.3%;
+
+      @include breakpoint(small) {
+        width: 335px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/*section contact*/
+
+.section-contact {
+  height: 341px;
+  background-color: $bg_grey;
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+
+  @include breakpoint(small) {
+    height: 237px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+  }
+  &__container {
+    height: 157px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  &__wrapper {
+    width: 664px;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+
+    @include breakpoint(small) {
+      flex-direction: column;
+      width: 264px;
+      height: 108px;
+    }
+
+    &-item {
+      width: 264px;
+      height: 56px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include breakpoint(small) {
+        height: 44px;
+      }
+    }
+    
+    .contact_type {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 147.3%;
+      text-align: center;
+      color: $grey;
+      margin: 0;
+
+      @include breakpoint(small) {
+        font-size: 12px;
+      }
+    }
+    .contact_address {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 147.3%;
+      text-align: center;
+      color: $black;
+      margin: 0;
+      transition:all 0.3s ease;
+
+      @include breakpoint(small) {
+        font-size: 14px;
+      }
+    }
+    .contact_address:hover {
+     text-decoration: underline; 
+    }
+
+    &-line_grey {
+      width: 1px;
+      height: 62px;
+      background: $line_grey;
+
+      @include breakpoint(small) {
+        display: none;
+      }
+    }
+  }
+}
+
+/*section team*/
+
+.section-team {
+  height: 895px;
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+
+  @include breakpoint(small) {
+    height: 634px;
+   // margin-top: 30px;
+    padding: 0;
+  }
+
+  &__container {
+    width: 980px;
+    height: 695px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(small) {
+      height: 534px;
+      margin-top: 40px;
+      padding: 0;
+    }
+  }
+  &__wrapper {
+    width: 980px;
+    height: 582px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    @include breakpoint(small) {
+      width: 334px;
+      height: 474px;
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+    }
+
+    &-item {
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      width: 196px;
+      height: 261px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 60px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+
+      @include breakpoint(small) {
+        width: 167px;
+        height: 138px;
+        margin-bottom: 30px;
+      }
+      & img{
+
+        @include breakpoint(small) {
+          width: 80px;
+          height: 80px;
+        }
+      }
+      &:hover {
+        box-shadow: 2px 2px 2px 2px $grey;
+      }
+
+      &:nth-last-child(2) {
+        margin-left: 261px;
+
+        @include breakpoint(small) {
+            margin-left: 0;
+            margin-bottom: 0;
+        }
+      }
+      &:nth-last-child(1) {
+        margin-right: 261px;
+
+        @include breakpoint(small) {
+          margin-right: 0;
+          margin-bottom: 0;
+      }
+      }
+      .person_name {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 147.3%;
+        color: $black;
+        margin-top: 23px;
+        margin-bottom: 8px;
+
+        @include breakpoint(small) {
+          width: 167px;
+          font-size: 16px;
+          margin-top: 15px;
+          margin-bottom: 1px;
+        }
+      }
+
+      .person_profession {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 147.3%;
+        color: $lightGrey;
+
+        @include breakpoint(small) {
+         font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  height: 124px;
+  background-color: $bg_footer ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include breakpoint(small) {
+    height: 125px;
+  }
+
+  &__wrapper {
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(small) {
+      height: 65px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-left: 20px;
+    }
+  }
+  &__copyright {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    opacity: 0.4;
+    padding-left: 40px;
+
+    @include breakpoint(small) {
+      width: 152px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__social-icons {
+    width: 124px;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+
+    @include breakpoint(small) {
+      width: 124px;
+      height: 32px;
+      display: flex;
+      padding-right: 0;
+    }
+
+    .icon {
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .icon:hover {
+      box-shadow: 0 1px 4px 1px white;
+    }
+  }
+}
