@@ -14,3 +14,4 @@
 ***Module 21***
 * I collected two pages with webpack.
 * I used Минификаторы and Шаблонизаторы.
+* https://self-drive-webpack.netlify.app/
