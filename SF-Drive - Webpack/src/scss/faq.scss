@@ -1,0 +1,451 @@
+/* variables*/
+
+$mainBlack: #1B1B1B;
+$black: #000;
+$grey: #4F4F4F;
+$lightGrey: #828282;
+$white: #fff;
+$bg_grey: #F7F9FB;
+$line_grey:#C8C8CF;
+$bg_footer: #3F3D56;
+
+/*mixin*/
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+  @else if $point == small {
+    @media screen and (max-width: 767px) {
+      @content;
+    }
+  }
+}
+
+/* generic*/
+.is-animated {
+transition: all 400ms ease;
+}
+
+/* normalize */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*common*/
+.content_wrapper {
+  width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+
+  @include breakpoint(small) {
+    width: 375px;
+  }
+
+  .is-active {
+    background: rgba(97, 161, 153, 0.15);
+    color: #61A199;
+    font-weight: 500;
+  }
+  .active-nav-item {
+    color: $black;
+    border-bottom: 2px solid rgb(243, 138, 0);
+  }
+}
+
+
+/*header*/
+.header {
+  color: $mainBlack;
+  
+
+  &__wrapper{
+    height: 90px;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(small) {
+      height: 68px; 
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+  }
+    &__logo{
+      width: 115px;
+      height: 28px;
+      margin-left: 40px;
+      position: relative;
+
+      @include breakpoint(small) {
+        margin-left: 20px;
+      }
+
+        &-name {
+          font-family: 'Rubik', sans-serif;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 28px;
+          color: inherit;
+        }
+
+        &-line {
+          width: 4px;
+          height: 3px;
+          background-color: $mainBlack;
+          position: absolute;
+        }
+        .first {
+          left: 42px;
+          top: 9px;
+        }
+        .second {
+          left: 42px;
+          top: 16px;
+        }   
+    }
+
+    &__nav {
+      width: 293px;
+      height: 19px;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: space-between;
+      margin-left: 806px;
+
+      @include breakpoint(small) {
+        display: none;
+      }
+
+        &-item {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 19px;
+          text-decoration: none;
+          color: inherit;
+          transition: color 400ms ease;
+          &:hover{
+            color: $black;
+            border-bottom: 2px solid rgb(243, 138, 0);
+          }
+        }
+    }
+
+    &__btn {
+      margin-left: 40px;
+
+      @include breakpoint(small) {
+        display: none;
+      }
+      &-signin{
+        padding: 12px 30px;
+        width: 106px;
+        height: 43px;
+        border: 1px solid rgba(27, 27, 27, 0.4);
+        background-color: transparent;
+        box-sizing: border-box;
+        border-radius: 6px;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        cursor: pointer;
+        outline: none;
+
+        &:hover {
+          background-color: rgb(243, 138, 0);
+          color: $white;
+          border-color: rgb(243, 138, 0);
+        }
+      }
+    }
+
+   
+    &__menu-icon {
+      width: 18px;
+      height: 12px;
+      position: relative;
+      display: none;
+      margin-right: 23px;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+
+      &:hover{
+       transform: rotate(360deg);
+      }
+
+      @include breakpoint(small) {
+        display: block;
+      }
+
+      &-item {
+        width: 18px;
+        height: 3px;
+        background-color: $black;
+        position: absolute;
+
+        &:nth-last-child(1){
+          top: 4px;
+        }
+        &:nth-last-child(2){
+          top: 8px;
+        }
+      }
+      
+    }
+
+    
+}
+
+/*main*/
+/*section main*/
+
+.section-main {
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+
+  @include breakpoint(small) {
+    height: 368px;
+  }
+  
+
+  & img {
+    width: 360px;
+    height: 300px;
+    margin: 80px 0 60px 0;
+
+    @include breakpoint(small) {
+      width: 242px;
+      height: 202px;
+      margin: 0 0 40px 0;
+    }
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 120%;
+    color: $mainBlack;
+    margin-bottom: 30px;
+
+    @include breakpoint(small) {
+      font-weight: 500;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__desc {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 147.3%;
+    color: $mainBlack;
+
+    @include breakpoint(small) {
+      font-size: 16px;
+    }
+  }
+}
+
+/*section - faq*/
+.section-faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include breakpoint(small) {
+    width: 375px;
+  }
+    &__wrapper{
+      width: 1026px;
+      margin-bottom: 14px;
+
+      @include breakpoint(small) {
+        margin-bottom: 15px;
+        width: 335px;
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+        &-btn {
+          font-family: "Roboto", sans-serif;
+          width: 100%;
+          height: 66px;
+          background: rgba(97, 161, 153, 0.1);
+          border-radius: 6px;
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 147.3%;
+          color: $mainBlack;
+          text-align: left;
+          padding-left: 22px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          @include breakpoint(small) {
+            height: 50px;
+            padding-left: 20px;
+            background: #F7F7F8;
+            font-size: 14px;
+          }
+
+          &:hover{
+            background: rgba(97, 161, 153, 0.15);
+            color: #61A199;
+            font-weight: 500;
+          }
+          .fa {
+            font-size: 28px;
+            font-weight: bold;
+            float: right;
+            margin-right: 27px;
+            margin-left: 10px;
+
+            @include breakpoint(small) {
+              font-size: 18px;
+              float: right;
+              margin-right: 17px;
+            }
+          }
+        }
+      
+
+      &-content  {
+        width: 784px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 147.3%;
+        color: $mainBlack;
+        text-align: left;
+        padding-left: 22px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+
+        @include breakpoint(small) {
+          width: 295px;
+          font-size: 14px;
+        }
+      }
+
+      &-text {
+        padding-top: 20px;
+        padding-bottom: 40px;
+
+        @include breakpoint(small) {
+          padding-top: 15px;
+          padding-bottom: 30px;
+        }
+      }
+  }
+
+  &__wrapper:nth-last-child(5) {
+    
+    @include breakpoint(small) {
+      .section-faq__wrapper-btn {
+        height: 70px;
+      } 
+    }   
+  }
+
+  &__wrapper:nth-last-child(3) {
+    
+    @include breakpoint(small) {
+      .section-faq__wrapper-btn {
+        height: 70px;
+      } 
+    }   
+  }
+}
+/*footer*/
+.footer {
+  height: 124px;
+  background-color: $bg_footer ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+
+  @include breakpoint(small) {
+    height: 125px;
+    margin-top: 50px;
+  }
+
+  &__wrapper {
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(small) {
+      height: 65px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-left: 20px;
+    }
+  }
+  &__copyright {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    opacity: 0.4;
+    padding-left: 40px;
+
+    @include breakpoint(small) {
+      width: 152px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__social-icons {
+    width: 124px;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+
+    @include breakpoint(small) {
+      width: 128px;
+      height: 32px;
+      display: flex;
+      padding-right: 0;
+    }
+
+    .icon {
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .icon:hover {
+      box-shadow: 0 1px 4px 1px white;
+    }
+  }
+}

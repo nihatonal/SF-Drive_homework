@@ -1,0 +1,88 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title О нас
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='dist/main.css')
+  body
+    header.header.content_wrapper
+      .header__wrapper.content-container
+        .header__logo
+          p.header__logo-name SkillDrive
+          .header__logo-line.first
+          .header__logo-line.second
+        nav.header__nav
+          a.header__nav-item(href='#') О нас
+          a.header__nav-item(href='#') Условия
+          a.header__nav-item(href='faq.html') Частые вопросы
+        .header__btn
+          button.header__btn-signin Войти
+        .header__menu-icon
+          .header__menu-icon-item
+          .header__menu-icon-item
+          .header__menu-icon-item
+    main
+      section.section-about.content_wrapper
+        .content_container
+          img.section-about__image(src='assets/images/mainphoto.svg' alt='people are staying')
+          .section-about__wrapper
+            h1.section-about__wrapper-title О нас
+            p.section-about__wrapper-text
+              | Это учебный проект, созданный с целью получения
+              | боевого опыта в разработке настоящего живого веб-приложения. Этот сервис
+              | имитирует работу каршеринга, в котором можно не только арендовать автомобили,
+              | но и сдавать их в аренду.
+      section.section-contact.content_wrapper
+        .section-contact__container
+          h2.section-contact__title Контакты
+          .section-contact__wrapper
+            .section-contact__wrapper-item
+              p.contact_type Электронная почта
+              p.contact_address drive@skillfactory.com
+            span.section-contact__wrapper-line_grey
+            .section-contact__wrapper-item
+              p.contact_type Телефон
+              p.contact_address +7 912 123-45-67
+      section.section-team.content_wrapper
+        .section-team__container
+          h2.section-team__title Команда
+          .section-team__wrapper
+            .section-team__wrapper-item
+              img(src='assets/images/ivan.png' alt='Иван Иванов')
+              p.person_name Иван Иванов
+              p.person_profession СЕО
+            .section-team__wrapper-item
+              img(src='assets/images/aleksey.png' alt='Алексей Смирнов')
+              p.person_name Алексей Смирнов
+              p.person_profession Frontend-разработчик
+            .section-team__wrapper-item
+              img(src='assets/images/denis.png' alt='Денис Ярцев')
+              p.person_name Денис Ярцев
+              p.person_profession Backend-разработчик
+            .section-team__wrapper-item
+              img(src='assets/images/nikalay.png' alt='Николай Морозов')
+              p.person_name Николай Морозов
+              p.person_profession Дизайнер
+            .section-team__wrapper-item
+              img(src='assets/images/irina.png' alt='Ирина Деева')
+              p.person_name Ирина Деева
+              p.person_profession Копирайтер
+            .section-team__wrapper-item
+              img(src='assets/images/maria.png' alt='Мария Стрелкова')
+              p.person_name Мария Стрелкова
+              p.person_profession SMM
+    footer.footer.content_wrapper
+      .footer__wrapper
+        p.footer__copyright © SkillDrive Inc. 2020
+        .footer__social-icons
+          .icon
+            img(src='assets/icons/vk.svg' alt='VK')
+          .icon
+            img(src='assets/icons/instagram.svg' alt='instagram')
+          .icon
+            img(src='assets/icons/facebook.svg' alt='facebook')

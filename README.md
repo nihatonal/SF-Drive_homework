@@ -10,3 +10,7 @@
 
 
 ***Note:*** I added file ***SF-Drive*** for homework module 20.
+
+***Module 21***
+* I collected two pages with webpack.
+* I used Минификаторы and Шаблонизаторы.
