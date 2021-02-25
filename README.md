@@ -15,3 +15,6 @@
 * I collected two pages with webpack.
 * I used Минификаторы and Шаблонизаторы.
 * https://self-drive-webpack.netlify.app/
+
+***Module 23***
+* https://6037f3ad5ef2bd3145f1df7f--sf-drive-react.netlify.app/
