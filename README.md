@@ -18,3 +18,23 @@
 
 ***Module 23***
 * https://6037f3ad5ef2bd3145f1df7f--sf-drive-react.netlify.app/
+
+***Modele 24***
+
+**To create "Components" follow to orders**
+
+1. Open a new Terminal (on the folder - sf_drive_react_utility),
+
+2. To create *'./src/components'* folder 
+
+code:
+
+node create.js cf ./src/components
+
+3. To create *a components*
+
+code:
+
+node create.js c ./src/components/**(name of components)**.js **"name of components"** --f=**(function or class)**
+
+*You can choose function or class for the flag.*
