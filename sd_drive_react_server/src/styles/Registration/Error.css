@@ -1,0 +1,18 @@
+.container_error {
+    width: 1440px;
+    height: 58px;
+    background: #EB5757;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_error-item{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
