@@ -1,16 +1,17 @@
 .form__container {
     width: 1440px;
     height: 1606px;
+    /* height: 900px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin-top: 103px;}
+    margin-top: 150px;}
     @media screen and (max-width: 767px) {
       .form__container{
         width: 375px;
         height: 1741px;
-        margin-top: 82px; } }
+        margin-top: 122px; } }
 
     .form__container-head {
       height: 120px;
@@ -207,7 +208,8 @@
           font-size: 14px;
           line-height: 16px;
           padding: 0 11px;
-          color: #1B1B1B; }
+          color: #1B1B1B;
+         }
           
 
         .form__container_wrapper-form-item input[type=text], .form__container_wrapper-form-item input[type=email] {
@@ -222,7 +224,7 @@
           border: 2px solid #61A199;
           outline: none; }
         .form__container_wrapper-form-item input:hover {
-          cursor: url("../../assets/icons/cursor.svg"), auto; }
+          cursor: pointer }
         .form__container_wrapper-form-item input[type=date]::-webkit-calendar-picker-indicator {
           opacity: 0; }
       .form__container_wrapper ::-webkit-input-placeholder {
@@ -253,7 +255,7 @@
         border-radius: 6px;
         border: none;
         outline: none;
-        cursor: url("../../assets/icons/cursor.svg"), auto; }
+        cursor: pointer;}
         @media screen and (max-width: 767px) {
           .form__container-btn-wrapper-btn {
              width: 335px; }}

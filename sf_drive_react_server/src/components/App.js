@@ -13,14 +13,18 @@ import MainPage from "./MainPage";
 import About from "./About";
 import Faq from "./Faq";
 import Conditions from "./Conditions";
-import RegistrationPage from "./RegistrationPage/RegistrationPage.js";
+import RegistrationPage from "./RegistrationPage/RegistrationPage";
+import StepTwo from "./StepTwo/StepTwo";
+import Header from "./Header";
 
 function App() {
     
     return (
       <Router>
+        <Header/>
             <Switch>
-             <Route exact path="/" component={RegistrationPage} />
+             <Route exact path="/" component={StepTwo} />
+             <Route exact path="/RegistrationPage" component={RegistrationPage} />
              <Route exact path="/MainPage" component={MainPage} /> 
              <Route exact path="/About" component={About} /> 
              <Route exact path="/Faq" component={Faq} />

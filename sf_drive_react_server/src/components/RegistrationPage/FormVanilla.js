@@ -1,6 +1,8 @@
 import React from "react";
 import Form from "./Form";
-// import Debug from "./Debug";
+import axios from 'axios';
+import { useHistory } from "react-router-dom";
+
 import Header from "../Header";
 import Error from "./Error";
 
@@ -10,6 +12,8 @@ function FormVanilla({ initialValues, validate }) {
   const [errors, setErrors] = React.useState({});
 
   const [touched, setTouched] = React.useState({});
+
+  let history = useHistory();
 
 
   // change event handler
@@ -49,7 +53,7 @@ function FormVanilla({ initialValues, validate }) {
     });
   };
   // form submit handler
-  const handleSubmit = evt => {
+  const  handleSubmit  = evt => {
     evt.preventDefault();
     
     // validate the form
@@ -76,9 +80,21 @@ function FormVanilla({ initialValues, validate }) {
     setErrors(formValidation.errors);
     setTouched(formValidation.touched);
 
-    values.password = btoa(values.password);
-    values.confirm_password = btoa( values.confirm_password);
-    const data = JSON.stringify(values, null, 2);
+    const registered = {
+        userName: values.userName,
+        birthdayDate: values.birthdayDate,
+        email: values.email,
+        phone: values.phone,
+        passport: values.passport,
+        datepassport: values.datepassport,
+        issued: values.issued,
+        code: values.code,
+        license: values.license,
+        licenseDate: values.licenseDate,
+        password: values.password
+    };
+   
+
     
     if (
       !Object.values(formValidation.errors).length && // errors object is empty
@@ -87,19 +103,25 @@ function FormVanilla({ initialValues, validate }) {
       Object.values(formValidation.touched).every(t => t === true) // every touched field is true
     ) {
 
-      setTimeout(() => {
-        alert(data);
-        console.log(data);
-     }, 1000);
-      
+    return axios.post('http://localhost:4000/app/signup', registered)
+        .then(response => {
+          console.log(response.data)
+          
+          setTimeout(() => {
+            
+            history.push("../StepTwo/StepTwo")
+            }, 1000);
+          
+        })
+
+           
     }
+    
   };
 
   
   return (
     <>
-      {}
-      <Header />
       {/* <Error /> */}
       <Form
         handleBlur={handleBlur}
@@ -114,4 +136,5 @@ function FormVanilla({ initialValues, validate }) {
   );
 }
 
+// export default FormVanilla;
 export default FormVanilla;

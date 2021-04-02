@@ -1,4 +1,5 @@
 const express = require('express');
+const parser = require('body-parser');
 const mongoose = require('mongoose');
 
 const {usersRouter} = require('./user-router');
@@ -16,6 +17,7 @@ function loggerMiddleware(req, res, next) {
 app.use(loggerMiddleware);
 
 app.use('/users', usersRouter);
+app.use(parser.json());
 
 app.get('/', (req, res) =>{
     res.statusCode = 418;

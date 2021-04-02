@@ -3,7 +3,6 @@ import * as React from "react";
 import { NavLink } from 'react-router-dom';
 
 import "../styles/MainPageSection.css";
-import Nav from "./Nav";
 
 
 import heroMain from '../assets/images/undraw_city_driver_jh2h (1) 3.svg';
@@ -32,34 +31,7 @@ function MainPageSection(props) {
     return (
         <div>
             <div className={"container_hero"}>
-                <header id={"navbar"} className={"header content_wrapper"}>
-                    
-                    <div className={"header__wrapper content-container"}>
-                        <div className={"header__logo"}>
-                            <p className={"header__logo-name"}>SkillDrive</p>
-                            <div className={"header__logo-line first"}></div>
-                            <div className={"header__logo-line second"}></div>
-                        </div>
-                        {/* <nav className={"header__nav"}>
-                            <a href="about.html" className="header__nav-item">О нас</a>
-                            <a href="#" className="header__nav-item">Условия</a>
-                            <a href="faq.html" className="header__nav-item">Частые вопросы</a>
-                        </nav> */}
-                        <Nav/>
-                        
-                        <div className={"header__btn"}>
-                            <button className={"header__btn-signin"}>Войти</button>
-                        </div>
-                        
-                        <div className={"header__menu-icon"}>
-                            <div className={"header__menu-icon-item"}></div>
-                            <div className={"header__menu-icon-item"}></div>
-                            <div className={"header__menu-icon-item"}></div>
-                        </div>
-                    
-                        
-                    </div> 
-                </header>
+                
         
                 <div className={"container_hero__wrapper"}>
                     <h1 className={"container_hero__wrapper-title"}>Каршеринг в любой точке России</h1>
@@ -72,23 +44,6 @@ function MainPageSection(props) {
                 <img src={heroMain} alt={"undraw_city_driver"} />
                 <img src={heroAdaptive} alt={"undraw_city_driversmall"} />
         
-                <div className={"container_hero-openmenu"}>
-
-                    <nav className ={"container_hero-openmenu-nav"}>
-                        <NavLink className ={"container_hero-openmenu-nav-item"} activeClassName="selected" to="/about">О нас</NavLink>
-                        <NavLink className ={"container_hero-openmenu-nav-item"} activeClassName="selected" to="/conditions">Условия</NavLink>
-                        <NavLink className ={"container_hero-openmenu-nav-item"} activeClassName="selected" to="/faq">Частые вопросы</NavLink>
-                    </nav>
-                    {/* <nav className={"container_hero-openmenu-nav"}>
-                        <a href={"#"} className={"container_hero-openmenu-nav-item"}>О нас</a>
-                        <a href={"#"} className={"container_hero-openmenu-nav-item"}>Условия</a>
-                        <a href={"faq.html"} className={"container_hero-openmenu-nav-item"}>Частые вопросы</a>
-                    </nav> */}
-        
-                    <div className={"container_hero-openmenu-btn"}>
-                        <button className={"container_hero-openmenu-btn-signin"}>Войти</button>
-                    </div>
-                </div>
             </div>
 
             <main>

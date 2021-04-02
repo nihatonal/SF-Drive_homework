@@ -1,5 +1,8 @@
 SF-Drive - Webpack/node_modules
 sf_drive_react/node_modules
 sf_drive_react_utility/node_modules
+sf_drive_react_server/
 sf_drive_react_server/node_modules
 sf_drive_react_server/src/components/RegistrationPage/Debug.js
+sf_drive/node_modules
+sf_drive/client/node_modules

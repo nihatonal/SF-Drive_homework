@@ -52,122 +52,6 @@
   .sticky {
     background: rgba(255, 255, 255, 0.95); }
   
-  /*header*/
-  .header {
-    color: #1B1B1B;
-    position: fixed;
-    top:0;
-    z-index: 99;
-    background: rgba(255, 255, 255, 0.95);
-    /*margin: 0 auto*/;
-     }
-    @media screen and (max-width: 767px) {
-      .header {
-        width: 375px;
-        height: 68px; } }
-    .header__wrapper {
-      height: 90px;
-      display: flex;
-      align-items: center; }
-      @media screen and (max-width: 767px) {
-        .header__wrapper {
-          height: 68px;
-          justify-content: space-between;
-          margin-bottom: 40px; } }
-    .header__logo {
-      width: 115px;
-      height: 28px;
-      margin-left: 40px;
-      position: relative; }
-      @media screen and (max-width: 767px) {
-        .header__logo {
-          margin-left: 20px; } }
-      .header__logo-name {
-        font-family: 'Rubik', sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-        color: inherit; }
-      .header__logo-line {
-        width: 4px;
-        height: 3px;
-        background-color: #1B1B1B;
-        position: absolute; }
-      .header__logo .first {
-        left: 42px;
-        top: 9px; }
-      .header__logo .second {
-        left: 42px;
-        top: 16px; }
-    .header__nav {
-      width: 293px;
-      height: 19px;
-      font-family: 'Roboto', sans-serif;
-      display: flex;
-      justify-content: space-between;
-      margin-left: 806px; }
-      @media screen and (max-width: 767px) {
-        .header__nav {
-          display: none; } }
-      .header__nav-item {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 19px;
-        text-decoration: none;
-        color: inherit;
-        transition: color 400ms ease; }
-        .header__nav-item:hover {
-          color: #000;
-          border-bottom: 2px solid #f38a00; }
-    .header__btn {
-      margin-left: 40px; }
-      @media screen and (max-width: 767px) {
-        .header__btn {
-          display: none; } }
-      .header__btn-signin {
-        padding: 12px 30px;
-        width: 106px;
-        height: 43px;
-        border: 1px solid rgba(27, 27, 27, 0.4);
-        background-color: transparent;
-        box-sizing: border-box;
-        border-radius: 6px;
-        font-family: 'Roboto', sans-serif;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        cursor: pointer;
-        outline: none; }
-        .header__btn-signin:hover {
-          background-color: #f38a00;
-          color: #fff;
-          border-color: #f38a00; }
-    .header__menu-icon {
-      width: 18px;
-      height: 12px;
-      position: relative;
-      display: none;
-      margin-right: 23px;
-      cursor: pointer;
-      transition: all 0.4s ease-in-out; }
-      .header__menu-icon:hover {
-        transform: rotate(360deg); }
-      @media screen and (max-width: 767px) {
-        .header__menu-icon {
-          display: block; } }
-      .header__menu-icon-item {
-        width: 18px;
-        height: 3px;
-        background-color: #000;
-        position: absolute;
-        transition: all 0.5s ease-out; }
-        .header__menu-icon-item:nth-last-child(1) {
-          top: 4px; }
-        .header__menu-icon-item:nth-last-child(2) {
-          top: 8px; }
   
   /* Container Hero*/
   .container_hero {
@@ -189,10 +73,10 @@
       @media screen and (max-width: 767px) {
         .container_hero img {
           display: none; } }
-    .container_hero img:nth-child(4) {
+    .container_hero img:nth-child(3) {
       display: none; }
       @media screen and (max-width: 767px) {
-        .container_hero img:nth-child(4) {
+        .container_hero img:nth-child(3) {
           display: block; } }
     .container_hero__wrapper {
       width: 617px;
@@ -202,12 +86,14 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      align-items: flex-start;
       margin-top: 200px;
       margin-left: 204px; }
       @media screen and (max-width: 767px) {
         .container_hero__wrapper {
           height: 217px;
           width: 335px;
+          align-items: center;
           margin-top: 303px;
           margin-left: 20px; } }
       .container_hero__wrapper-title {
@@ -230,57 +116,7 @@
           .container_hero__wrapper-text {
             width: 335px;
             font-size: 16px; } }
-    .container_hero-openmenu {
-      width: 375px;
-      height: 667px;
-      background: white;
-      font-family: 'Roboto', sans-serif;
-      position: absolute;
-      top: 0;
-      left: 0;
-      border: 1px solid blue;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      display: none; }
-      .container_hero-openmenu-nav {
-        width: 335px;
-        height: 146px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin: 260px 0 198px 0; }
-        .container_hero-openmenu-nav-item {
-          font-style: normal;
-          font-weight: normal;
-          font-size: 16px;
-          line-height: 19px;
-          text-decoration: none;
-          color: inherit;
-          transition: color 400ms ease; }
-          .container_hero-openmenu-nav-item:hover {
-            color: #000;
-            border-bottom: 2px solid #f38a00; }
-      .container_hero-openmenu-btn-signin {
-        padding: 12px 30px;
-        width: 335px;
-        height: 43px;
-        border: 1px solid rgba(27, 27, 27, 0.4);
-        background-color: transparent;
-        box-sizing: border-box;
-        border-radius: 6px;
-        font-family: 'Roboto', sans-serif;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        cursor: pointer;
-        outline: none; }
-        .container_hero-openmenu-btn-signin:hover {
-          background-color: #f38a00;
-          color: #fff;
-          border-color: #f38a00; }
+    
   
   /* main*/
   main {

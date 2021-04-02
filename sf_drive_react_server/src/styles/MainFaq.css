@@ -5,10 +5,12 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    font-family: "Roboto", sans-serif; }
+    font-family: "Roboto", sans-serif;
+    margin-top: 170px; }
     @media screen and (max-width: 767px) {
       .section-main {
-        height: 368px; } }
+        height: 368px;
+        margin-top: 108px; } }
     .section-main img {
       width: 360px;
       height: 300px;

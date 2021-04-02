@@ -1,6 +1,5 @@
 import * as React from "react";
 
-//import "../styles/MainPage.css";
 import MainPageSection from "./MainPageSection";
 import Footer from "./Footer";
 

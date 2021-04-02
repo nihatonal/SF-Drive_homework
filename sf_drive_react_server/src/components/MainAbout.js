@@ -8,11 +8,11 @@ import SectionTeam from "./SectionTeam";
 
 function MainAbout() {
     return (
-        <>
+        <div className= {"container-about"}>
             <SectionAbout/>
             <SectionContact/>
             <SectionTeam/>
-        </>
+        </div>
     );
 }
 

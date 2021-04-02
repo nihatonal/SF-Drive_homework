@@ -10,7 +10,7 @@ function Conditions() {
     return (
         
         <>
-            <Header/>
+            
             <section className={"section-main content_wrapper notready"}>
                 <p>Error: Page is not ready!</p>
             </section>

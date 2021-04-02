@@ -21,10 +21,11 @@ function Form({
 
     const [loading, setActive] = useState(false);
 
-    const fetchData = (event) => {
+    const fetchData = () => {
         setActive(true);
 
         setTimeout(() => {
+            
         setActive(false);
         }, 1000);
     };
@@ -39,6 +40,7 @@ function Form({
     //     setActiveBtn(true);
     //   }
   return (
+
     <div>
         <form onSubmit={handleSubmit} autoComplete="off" className={"form__container"}>
             <div className={"form__container-head"}>
